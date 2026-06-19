@@ -23,8 +23,8 @@
 - [x] Project 4 – Linux Process & Service Investigation
 - [x] Project 5 – Linux Log Analysis & Authentication Investigation
 - [x] Project 6 – Linux Network Investigation
-- [ ] Project 7 – SSH Investigation
-- [ ] Project 8 – File Integrity Investigation
+- [x] Project 7 – SSH Investigation
+- [x] Project 8 – File Integrity Investigation
 - [ ] Project 9 – Sudo Abuse Investigation
 - [ ] Project 10 – Incident Response on Linux
 
@@ -74,10 +74,10 @@
 | Section | Status |
 |----------|--------|
 | Windows Security Lab | **3 / 10** |
-| Linux Security Lab | **6 / 10** |
+| Linux Security Lab | **8 / 10** |
 | Network Security Lab | **1 / 10** |
 | SIEM Lab | **0 / 5** |
 | Threat Hunting | **0 / 5** |
 
-**Overall SOC L1 Progress:** **10 completed projects**
+**Overall SOC L1 Progress:** **12 completed projects**
 

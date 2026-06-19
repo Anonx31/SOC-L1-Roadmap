@@ -1,0 +1,62 @@
+# Investigation Report
+
+## Project
+Linux File Integrity Investigation
+
+## Date
+19 June 2026
+
+## Analyst
+Bobby (Anonx31)
+
+---
+
+## Incident Summary
+
+A baseline SHA-256 hash was generated for `important.txt` and stored in `baseline_hash.txt`. After intentionally modifying the file contents, the hash verification process detected that the file had changed.
+
+The integrity check failed, confirming that the file was modified after the baseline was established.
+
+---
+
+## Evidence Collected
+
+- Original SHA-256 hash
+- Baseline hash file
+- Modified SHA-256 hash
+- Hash verification failure
+- File metadata (`stat`)
+- File permissions (`ls -l`)
+
+---
+
+## Commands Used
+
+```bash
+sha256sum important.txt
+sha256sum important.txt > baseline_hash.txt
+cat baseline_hash.txt
+echo "Unauthorized modification detected." > important.txt
+cat important.txt
+sha256sum important.txt
+sha256sum -c baseline_hash.txt
+stat important.txt
+ls -l important.txt
+```
+
+---
+
+## Findings
+
+- Baseline hash successfully created.
+- File contents were modified.
+- New SHA-256 hash differed from the baseline.
+- Integrity verification returned `FAILED`.
+- File metadata reflected the recent modification.
+- File permissions remained unchanged.
+
+---
+
+## Conclusion
+
+SHA-256 hashing effectively detected unauthorized modifications to the monitored file. File integrity monitoring is a valuable control for identifying tampering, malware activity, or unexpected changes to sensitive files.
